@@ -22,14 +22,15 @@
 # Input must be formatted like '4x^5 -2x^2 +3'
 # Output gives polynomial in processable list form [[4, 5], [-2, 2], [3, 1]]
 def y_list(y_string):
-	y_list = []
+	return [[int(num) for num in term.split('x^')] for term in y_string.split(' ')]
+	# y_list = []
 
 
-	for term in y_string.split(' '):
-		x_pos = term.find('x')
-		y_list.append(int([term[:x_pos]]), int(term[x_pos+1:]))
+	# for term in y_string.split(' '):
+	# 	x_pos = term.find('x')
+	# 	y_list.append(int([term[:x_pos]]), int(term[x_pos+1:]))
 
-	return y_list
+	# return y_list
 
 # Input must be in processable list form
 def y_string(y_list):
