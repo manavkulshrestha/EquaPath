@@ -15,7 +15,6 @@ def normalize_y_string(y_string):
 # Input must be formatted like '4x^5 -2x^2 +3'
 # Output gives polynomial in processable list form [[4, 5], [-2, 2], [3, 1]]
 def get_y_list(y_string):
-	print(normalize_y_string(y_string))
 	return [[int(num) for num in term.split('x^')] for term in normalize_y_string(y_string).split(' ') if term[0] is not '0']
 
 # Input must be in processable list form
